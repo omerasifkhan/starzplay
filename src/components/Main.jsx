@@ -19,8 +19,7 @@ const Main = () => {
 
     setBanners([...posters])
   }, []);
-
-
+ 
   const settings = {
     dots: true,
     infinite: true,
@@ -28,9 +27,13 @@ const Main = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000
+    autoplaySpeed: 3000,
+    centerMode: true,
+    centerPadding: '25%',
   };
+    
 
+  
   return (
       <div className='banner-container'>
         <Slider {...settings}>

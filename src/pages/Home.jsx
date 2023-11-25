@@ -1,6 +1,4 @@
 import React from 'react'
-// import Main from '../components/Main'
-// import Row from '../components/Row'
 import { lazy, Suspense } from 'react';
 
 const Main = lazy(() => import('../components/Main'));
@@ -9,7 +7,6 @@ const Row = lazy(() => import('../components/Row'));
 const Home = () => {
   return (
     <>
-        
         <Suspense fallback={<div>Loading....</div>}>
           <Main />
         </Suspense>

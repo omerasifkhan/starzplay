@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faCog } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -62,8 +64,21 @@ const Navbar = () => {
       {/* Right side (search and settings icons) */}
       <div className="flex items-center">
         {/* Replace these placeholders with actual icons */}
-        <span className="text-white mx-2 cursor-pointer">🔍</span>
-        <span className="text-white mx-2 cursor-pointer">⚙️</span>
+        {/* Search Icon */}
+        <FontAwesomeIcon
+          icon={faSearch}
+          size="lg" // Adjust the size (options: 'xs', 'sm', 'lg', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x')
+          color="#F8F9FA" // Set the color
+          className="mr-2"
+          style={{marginRight: '25px'}}
+        />
+        <FontAwesomeIcon 
+          icon={faCog}
+          size="lg" // Adjust the size (options: 'xs', 'sm', 'lg', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x')
+          color="#F8F9FA" // Set the color
+        /> 
+        {/* <span className="text-white mx-2 cursor-pointer">🔍</span>
+        <span className="text-white mx-2 cursor-pointer">⚙️</span> */}
       </div>
     </nav>
   );

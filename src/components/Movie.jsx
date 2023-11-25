@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
+import unavailableImg from './../unavailable.jpg'
 
 const Movie = ({ item }) => {
   return (
     <div className='w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] inline-block cursor-pointer relative p-2'>
       <img
         className='w-full h-auto block'
-        src={item}
+        src={item || unavailableImg}
         alt={'movie'}
         loading='lazy'
       />

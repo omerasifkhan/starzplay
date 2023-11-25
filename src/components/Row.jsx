@@ -49,7 +49,7 @@ const Row = ({ title, rowID }) => {
           className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'
         >
           {movies.map((item, id) => (
-            <Suspense fallback={<div>Loading....</div>}>
+            <Suspense fallback={<div>Loading....</div>} key={id}>
               <Movie key={id} item={item} />
             </Suspense>
           ))}
